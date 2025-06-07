@@ -59,15 +59,15 @@ document.addEventListener("DOMContentLoaded", function () {
             return 'Opening projects view...';
         },
         awards: `
-        - Discovered security bug in Meta's WhatsApp<br>
-        - Discovered XSS in Mumbai Police website
+        - 4x Dean's List Award (2023-2025) UC Berkeley, EECS <br>
+        - 2nd Place MOOC AI Hackathon 2025, UC Berkeley (Historical AI Debate Agent) <br>
         `,
         skills: `
         - Backend Development<br>
-        - Python: Flask, FastApi, discord.py<br>
-        - Java: Competitive Programming, JDA, Spring Boot (learning)<br>
-        - JavaScript: Mongoose, Express, NodeJs, discord.js, passport.js<br>
-        - Database: MongoDB, MySQL<br>
+        - Python: PyTorch, FastAPI, discord.py<br>
+        - Java: Spring Boot (learning)<br>
+        - JavaScript: NodeJs, discord.js, passport.js<br>
+        - Database: MySQL<br>
         - Version Control: Git<br>
         - CI/CD: Docker, GitHub CI/CD<br>
         - Cloud: Azure, AWS, GCP, Oracle Cloud<br>
@@ -78,8 +78,6 @@ document.addEventListener("DOMContentLoaded", function () {
         - Rapid learner with a strong ability to adapt to new technologies<br>
         - Strong communication and interpersonal skills<br>
         - Strong problem-solving skills<br>
-        - Managed a team of 15+ developers for ACM MPSTME's Technical Team<br>
-        - Managed a team of 5+ developers for NMIMS' official Technical Fest
         `,
         whoami: `<a href="arulloomba1.github.io" class="custom-link">Arul Loomba</a> | Software Engineer`,
 
