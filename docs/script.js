@@ -45,12 +45,12 @@ document.addEventListener("DOMContentLoaded", function () {
         },
 
         github: () => {
-            window.open("https://github.com/KartikJain14", "_blank");
+            window.open("https://github.com/arulloomba1", "_blank");
             return `Opening <a href="https://github.com/KartikJain14" target="_blank" class="custom-link">GitHub/KartikJain14</a>...`;
         },
 
         linkedin: () => {
-            window.open("https://linkedin.com/in/KartikJain1410", "_blank");
+            window.open("https://www.linkedin.com/in/arul-loomba/", "_blank");
             return `Opening <a href="https://linkedin.com/in/KartikJain1410" target="_blank" class="custom-link">LinkedIn/KartikJain1410</a>...`;
         },
 
@@ -88,8 +88,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         resume: () => {
             const link = document.createElement("a");
-            link.href = "/resume.pdf";
-            link.download = "Kartik_Resume.pdf";
+            link.href = "/resume1.pdf";
+            link.download = "Arul_Resume.pdf";
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
