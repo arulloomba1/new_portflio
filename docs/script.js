@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
     <b>whoami</b>      - Display my identity<br>
     <b>skills</b>      - Show my technical skills<br>
     <b>projects</b>    - List my featured projects<br>
-    <b>projects-ext</b>    - View detailed projects page<br>
     <b>awards</b>      - Display my achievements<br>
     <b>others</b>      - Show my management/soft skills<br>
     <br>
@@ -56,16 +55,13 @@ document.addEventListener("DOMContentLoaded", function () {
         },
 
         projects: `
-        - Backend: Taqneeq App's Backend, Mumbai MUN's Backend, ACM's Website Backend (Certification Portal)<br>
-        - App Integrations: Integrate Dynamic data with backend to the flutter app.<br>
-        - Hindi Call Transcriber: <a href="https://github.com/KartikJain14/darpg2024" target="_blank" class="custom-link">VoxBridge</a> is a Hindi audio to English and Hindi transcriber.<br>
-        - Subdomain Distribution Portal: <a href="https://github.com/KartikJain14/CloudFrost" target="_blank" class="custom-link">CloudFrost</a> is a portal that allows users to recieve free sub domains with DNS support.<br>
-        - Discord Bots: Customized Discord bot (heavily customized)
+        - Voice Recognition & Object Detection: YOLO-v8 model for 250+ household objects with FPGA-based voice synthesis<br>
+        - RISC-V Neural Network: Assembly-level implementation with stock market analysis applications<br>
+        - MAE Encoder Pipeline: Triple-stream architecture processing 500+GB of multimodal data<br>
+        - Robot Arm Simulator: Mujoco-based system supporting multiple robot arms with inverse kinematics<br>
+        - Snek Game: Feature-rich snake game with 30+ characters and 75+ map layouts, built in C/C++ with OpenGL<br>
+        - S1XT33N: Voice-controlled robot car with custom circuits and PCA-based voice classification<br>
         `,
-        'projects-ext': () => {
-            window.location.href = 'projects.html';
-            return 'Opening extended projects view...';
-        },
         awards: `
         - 4x Dean's List Award (2023-2025) UC Berkeley, EECS <br>
         - 2nd Place MOOC AI Hackathon 2025, UC Berkeley (Historical AI Debate Agent) <br>
@@ -109,8 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
         r: "resume",
         cls: "clear",
         h: "help",
-        fetch: "neofetch",
-        pe: "projects-ext"
+        fetch: "neofetch"
     };
 
     const commandList = Object.keys(commands).concat(Object.keys(aliases));

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAE Encoder Pipeline - Project Demos</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow-y: auto;
+            scroll-padding-top: 80px;
+            background: #001a33;
+            color: #00ff99;
+        }
+
+        .nav-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(20, 20, 20, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(0, 255, 153, 0.2);
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .nav-left {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .back-button {
+            color: #00ff99;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .back-button:hover {
+            background: rgba(0, 255, 153, 0.1);
+        }
+
+        .back-button::before {
+            content: "←";
+            font-size: 1.2em;
+        }
+
+        .nav-link {
+            color: #00ff99;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .nav-link:hover {
+            background: rgba(0, 255, 153, 0.1);
+        }
+
+        .demos-container {
+            max-width: 1200px;
+            margin: 1750px auto 60px;
+            padding: 0 30px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .header h1 {
+            color: #00ff99;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #00ff99;
+            opacity: 0.8;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        .video-item {
+            background: rgba(0, 255, 153, 0.05);
+            border: 1px solid rgba(0, 255, 153, 0.2);
+            border-radius: 12px;
+            padding: 25px;
+            transition: transform 0.3s ease;
+        }
+
+        .video-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .video-item video {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .video-caption {
+            color: #00ff99;
+            font-size: 1.1em;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .video-description {
+            color: #00ff99;
+            opacity: 0.8;
+            font-size: 0.9em;
+            line-height: 1.6;
+            padding: 0 10px;
+        }
+
+        @media (max-width: 768px) {
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-container">
+        <div class="nav-content">
+            <div class="nav-left">
+                <a href="projects.html" class="back-button">Back to Projects</a>
+            </div>
+            <div class="nav-right">
+                <a href="index.html" class="nav-link">Terminal</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="demos-container">
+        <div class="header">
+            <h1>MAE Encoder Pipeline Demos</h1>
+            <p>Visual demonstrations of the triple-stream architecture in action</p>
+        </div>
+
+        <div class="video-grid">
+            <div class="video-item">
+                <video controls>
+                    <source src="videos/2-phone_input_strided_slow_temp_slowed.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-caption">Phone Input Demo</div>
+                <div class="video-description">
+                    Raw input data capture showing the phone's movement patterns and sensor readings.
+                </div>
+            </div>
+
+            <div class="video-item">
+                <video controls>
+                    <source src="videos/1-phone_reconstruction_slow_temp_slowed.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-caption">Phone Reconstruction Demo</div>
+                <div class="video-description">
+                    Demonstration of the model's ability to reconstruct phone movement patterns from partial observations.
+                </div>
+            </div>
+
+            <div class="video-item">
+                <video controls>
+                    <source src="videos/4-laptop_input_strided_slow_temp_slowed.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-caption">Laptop Input Demo</div>
+                <div class="video-description">
+                    Raw input data from laptop sensors showing movement and interaction patterns.
+                </div>
+            </div>
+
+            <div class="video-item">
+                <video controls>
+                    <source src="videos/3-laptop_reconstruction_slow_temp_slowed.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-caption">Laptop Reconstruction Demo</div>
+                <div class="video-description">
+                    Model's reconstruction of laptop movement patterns, showcasing the triple-stream architecture's effectiveness.
+                </div>
+            </div>
+
+            <div class="video-item">
+                <video controls>
+                    <source src="videos/5-proprioception_plots_final_slowed.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-caption">Proprioception Analysis</div>
+                <div class="video-description">
+                    Detailed analysis of proprioceptive data showing the model's understanding of spatial relationships and movement patterns.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

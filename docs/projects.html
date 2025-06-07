@@ -6,6 +6,14 @@
     <title>Arul Loomba - Projects: Extended</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow-y: auto;
+            scroll-padding-top: 80px;
+        }
+
         .nav-container {
             position: fixed;
             top: 0;
@@ -45,7 +53,7 @@
 
         .projects-container {
             max-width: 1200px;
-            margin: 100px auto 40px;
+            margin: 1000px auto 40px;
             padding: 0 20px;
         }
 
@@ -152,6 +160,45 @@
             color: #001a33;
         }
 
+        .video-demo-section {
+            margin-top: 20px;
+            border-top: 1px solid rgba(0, 255, 153, 0.2);
+            padding-top: 20px;
+        }
+
+        .video-demo-section h4 {
+            color: #00ff99;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .video-item {
+            background: rgba(0, 255, 153, 0.05);
+            border: 1px solid rgba(0, 255, 153, 0.2);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .video-item video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .video-caption {
+            padding: 10px;
+            color: #00ff99;
+            font-size: 0.9em;
+            text-align: center;
+        }
+
         @media (max-width: 768px) {
             .projects-grid {
                 grid-template-columns: 1fr;
@@ -172,68 +219,110 @@
     </nav>
 
     <div class="projects-container">
-        <div class="header">
+        <!-- <div class="header">
             <h1>Projects: Extended</h1>
             <p>A detailed showcase of my most significant technical achievements</p>
-        </div>
+        </div> -->
 
         <div class="projects-grid">
             <div class="project-card">
                 <div class="project-image">
-                    <img src="https://via.placeholder.com/600x400" alt="VoxBridge Project">
+                    <img src="https://via.placeholder.com/600x400" alt="Voice Recognition and Object Detection">
                 </div>
                 <div class="project-details">
-                    <h3>VoxBridge - Hindi Call Transcriber</h3>
-                    <p>A sophisticated Hindi audio to English and Hindi transcriber that uses advanced NLP techniques to provide accurate transcriptions in real-time.</p>
+                    <h3>Voice Recognition and Object Detection Model</h3>
+                    <p>Advanced computer vision and voice synthesis system combining YOLO-v8 object detection with FPGA-based voice processing.</p>
                     <ul>
-                        <li>Built with Python and TensorFlow</li>
-                        <li>Supports real-time transcription</li>
-                        <li>Accuracy rate of over 90%</li>
-                        <li>Advanced noise reduction algorithms</li>
+                        <li>Developed YOLO-v8 model for 250+ household objects detection</li>
+                        <li>Implemented Voice Synthesis on FPGA using Verilog</li>
+                        <li>Created integrated conferencing application</li>
+                        <li>Stack: Python, Tensorflow, Verilog</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/600x400" alt="RISC-V Neural Network">
+                </div>
+                <div class="project-details">
+                    <h3>RISC-V Neural Network</h3>
+                    <p>Low-level neural network implementation at the assembly level with practical applications in stock market analysis.</p>
+                    <ul>
+                        <li>Implemented matrix multiplication and ReLu in assembly</li>
+                        <li>Designed memory-efficient architecture with 10+ caches</li>
+                        <li>Created full machine learning interface using 32-bit registers</li>
+                        <li>Stack: C, C++, Assembly, Logism</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/600x400" alt="MAE Encoder Pipeline">
+                </div>
+                <div class="project-details">
+                    <h3>MAE Encoder Pipeline</h3>
+                    <p>Advanced triple-stream Masked-Autoencoder for multimodal data processing and analysis.</p>
+                    <ul>
+                        <li>Engineered triple-stream architecture for visual and proprioceptive data</li>
+                        <li>Processed 500+GB of training data</li>
+                        <li>Implemented batch parallelization with CUDA</li>
+                        <li>Stack: PyTorch, OpenCV, Gym, NumPy, Tensorboard, CUDA, Weights & Biases</li>
                     </ul>
                     <div class="project-links">
-                        <a href="https://github.com/KartikJain14/darpg2024" target="_blank">View on GitHub</a>
-                        <a href="#" target="_blank">Live Demo</a>
+                        <a href="mae_demos.html">View Project Demos</a>
                     </div>
                 </div>
             </div>
 
             <div class="project-card">
                 <div class="project-image">
-                    <img src="https://via.placeholder.com/600x400" alt="CloudFrost Project">
+                    <img src="https://via.placeholder.com/600x400" alt="Mujoco Simulator Robot Arm">
                 </div>
                 <div class="project-details">
-                    <h3>CloudFrost - Subdomain Distribution</h3>
-                    <p>A comprehensive portal for managing and distributing subdomains with DNS support, making it easy for developers to set up and manage their web presence.</p>
+                    <h3>Mujoco Simulator Robot Arm</h3>
+                    <p>Comprehensive robot arm simulation and data collection system with multiple environment support.</p>
                     <ul>
-                        <li>Built with Node.js and Express</li>
-                        <li>Integrated DNS management</li>
-                        <li>Automated SSL certificate handling</li>
-                        <li>User-friendly dashboard</li>
+                        <li>Designed data collection pipeline with inverse-kinematics</li>
+                        <li>Implemented end-effector joint calculations</li>
+                        <li>Collected 5+ hours of robot task data</li>
+                        <li>Supported multiple robot arms (SO100, Franka, Arx)</li>
+                        <li>Stack: Mujoco, Huggingface, CAD, Pandas, PyArrow, PySide6, MediaPy</li>
                     </ul>
-                    <div class="project-links">
-                        <a href="https://github.com/KartikJain14/CloudFrost" target="_blank">View on GitHub</a>
-                        <a href="#" target="_blank">Live Demo</a>
-                    </div>
                 </div>
             </div>
 
             <div class="project-card">
                 <div class="project-image">
-                    <img src="https://via.placeholder.com/600x400" alt="ACM Portal">
+                    <img src="https://via.placeholder.com/600x400" alt="Snek Game">
                 </div>
                 <div class="project-details">
-                    <h3>ACM Certification Portal</h3>
-                    <p>Backend system for ACM's certification portal handling course management and certification, streamlining the process for both administrators and users.</p>
+                    <h3>Snek Game</h3>
+                    <p>Feature-rich snake game with extensive customization options and cross-platform support.</p>
                     <ul>
-                        <li>Built with Flask and MongoDB</li>
-                        <li>Secure authentication system</li>
-                        <li>Automated certificate generation</li>
-                        <li>Real-time progress tracking</li>
+                        <li>Developed 1000+ lines of C/C++ code with custom game mechanics</li>
+                        <li>Created 30+ unique snake characters and 75+ modular map layouts</li>
+                        <li>Implemented JavaScript-based UI/UX for cross-platform support</li>
+                        <li>Stack: C#, Makefile, Git, OpenGL, Valgrind, Docker</li>
                     </ul>
-                    <div class="project-links">
-                        <a href="#" target="_blank">View Documentation</a>
-                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/600x400" alt="S1XT33N Voice-Controlled Robot Car">
+                </div>
+                <div class="project-details">
+                    <h3>S1XT33N Voice-Controlled Robot Car</h3>
+                    <p>Autonomous vehicle system with voice command recognition and custom circuit design for optimal performance.</p>
+                    <ul>
+                        <li>Developed voice-activated control system with 4+ command recognition</li>
+                        <li>Designed and implemented custom motor controller and power management circuits</li>
+                        <li>Applied PWM and current-controlled sources for digital motor regulation</li>
+                        <li>Implemented PCA-based voice classification with optimized hyperparameters</li>
+                        <li>Stack: Arduino, Embedded C, PWM, PCA, Signal Processing, Analog Circuits</li>
+                    </ul>
                 </div>
             </div>
         </div>
