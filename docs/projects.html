@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arul Loomba - Projects: Extended</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .nav-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(20, 20, 20, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(0, 255, 153, 0.2);
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .nav-link {
+            color: #00ff99;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .nav-link:hover {
+            background: rgba(0, 255, 153, 0.1);
+        }
+
+        .nav-link.active {
+            background: rgba(0, 255, 153, 0.2);
+        }
+
+        .projects-container {
+            max-width: 1200px;
+            margin: 100px auto 40px;
+            padding: 0 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            color: #00ff99;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #00ff99;
+            opacity: 0.8;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            background: rgba(0, 255, 153, 0.05);
+            border: 1px solid rgba(0, 255, 153, 0.2);
+            border-radius: 12px;
+            padding: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 255, 153, 0.15);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project-details h3 {
+            color: #00ff99;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .project-details p {
+            color: #00ff99;
+            opacity: 0.9;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .project-details ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        .project-details li {
+            color: #00ff99;
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .project-details li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #00ff99;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .project-links a {
+            color: #00ff99;
+            text-decoration: none;
+            padding: 8px 15px;
+            border: 1px solid #00ff99;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .project-links a:hover {
+            background: #00ff99;
+            color: #001a33;
+        }
+
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-container">
+        <div class="nav-content">
+            <a href="index.html" class="nav-link">Terminal</a>
+            <a href="projects.html" class="nav-link active">Extended Projects</a>
+        </div>
+    </nav>
+
+    <div class="projects-container">
+        <div class="header">
+            <h1>Extended Projects</h1>
+            <p>A detailed showcase of my most significant technical achievements</p>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/600x400" alt="VoxBridge Project">
+                </div>
+                <div class="project-details">
+                    <h3>VoxBridge - Hindi Call Transcriber</h3>
+                    <p>A sophisticated Hindi audio to English and Hindi transcriber that uses advanced NLP techniques to provide accurate transcriptions in real-time.</p>
+                    <ul>
+                        <li>Built with Python and TensorFlow</li>
+                        <li>Supports real-time transcription</li>
+                        <li>Accuracy rate of over 90%</li>
+                        <li>Advanced noise reduction algorithms</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/KartikJain14/darpg2024" target="_blank">View on GitHub</a>
+                        <a href="#" target="_blank">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/600x400" alt="CloudFrost Project">
+                </div>
+                <div class="project-details">
+                    <h3>CloudFrost - Subdomain Distribution</h3>
+                    <p>A comprehensive portal for managing and distributing subdomains with DNS support, making it easy for developers to set up and manage their web presence.</p>
+                    <ul>
+                        <li>Built with Node.js and Express</li>
+                        <li>Integrated DNS management</li>
+                        <li>Automated SSL certificate handling</li>
+                        <li>User-friendly dashboard</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/KartikJain14/CloudFrost" target="_blank">View on GitHub</a>
+                        <a href="#" target="_blank">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/600x400" alt="ACM Portal">
+                </div>
+                <div class="project-details">
+                    <h3>ACM Certification Portal</h3>
+                    <p>Backend system for ACM's certification portal handling course management and certification, streamlining the process for both administrators and users.</p>
+                    <ul>
+                        <li>Built with Flask and MongoDB</li>
+                        <li>Secure authentication system</li>
+                        <li>Automated certificate generation</li>
+                        <li>Real-time progress tracking</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="#" target="_blank">View Documentation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

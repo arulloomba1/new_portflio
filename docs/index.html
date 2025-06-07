@@ -23,31 +23,78 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Arul Loomba | Portfolio</title>
+    <title>Arul Loomba - Terminal</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .nav-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(20, 20, 20, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(0, 255, 153, 0.2);
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .nav-link {
+            color: #00ff99;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .nav-link:hover {
+            background: rgba(0, 255, 153, 0.1);
+        }
+
+        .nav-link.active {
+            background: rgba(0, 255, 153, 0.2);
+        }
+
+        #terminal-wrapper {
+            margin-top: 80px;
+        }
+    </style>
 
     <!-- Umami Analytics -->
     <script defer src="https://cloud.umami.is/script.js" data-website-id="2d866edd-cb4c-4a8e-90b2-f2152ce0a813"></script>
 </head>
 <body>
+    <nav class="nav-container">
+        <div class="nav-content">
+            <a href="index.html" class="nav-link active">Terminal</a>
+            <a href="projects.html" class="nav-link">Projects: Extended</a>
+        </div>
+    </nav>
+
     <div id="terminal-wrapper">
         <div id="terminal-container">
             <div id="terminal">
                 <div id="output"></div>
                 <div class="input-line">
-                    <span class="prompt">λ</span>
                     <div class="autocomplete-container">
+                        <span class="prompt">λ</span>
+                        <input type="text" id="commandInput" autocomplete="off" spellcheck="false">
                         <span id="inputMirror"></span>
-                        <input type="text" id="commandInput" autofocus autocomplete="off">
                         <span id="autocompleteHint"></span>
                     </div>
                 </div>
             </div>
         </div>
-
         <div id="command-bar"></div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>

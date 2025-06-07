@@ -54,15 +54,12 @@ document.addEventListener("DOMContentLoaded", function () {
             return `Opening <a href="https://linkedin.com/in/arul-loomba" target="_blank" class="custom-link">LinkedIn/arul-loomba</a>...`;
         },
 
-        projects: `
-        - Backend: Taqneeq App's Backend, Mumbai MUN's Backend, ACM's Website Backend (Certification Portal)<br>
-        - App Integrations: Integrate Dynamic data with backend to the flutter app.<br>
-        - Hindi Call Transcriber: <a href="https://github.com/KartikJain14/darpg2024" target="_blank" class="custom-link">VoxBridge</a> is a Hindi audio to English and Hindi transcriber.<br>
-        - Subdomain Distribution Portal: <a href="https://github.com/KartikJain14/CloudFrost" target="_blank" class="custom-link">CloudFrost</a> is a portal that allows users to recieve free sub domains with DNS support.<br>
-        - Discord Bots: Customized Discord bot (heavily customized)
-        `,
+        projects: () => {
+            window.location.href = 'projects.html';
+            return 'Opening projects view...';
+        },
         awards: `
-        - Discovered security bug in Meta’s WhatsApp<br>
+        - Discovered security bug in Meta's WhatsApp<br>
         - Discovered XSS in Mumbai Police website
         `,
         skills: `
