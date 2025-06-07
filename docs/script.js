@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <b>whoami</b>      - Display my identity<br>
     <b>skills</b>      - Show my technical skills<br>
     <b>projects</b>    - List my featured projects<br>
+    <b>projects-ext</b>    - View detailed projects page<br>
     <b>awards</b>      - Display my achievements<br>
     <b>others</b>      - Show my management/soft skills<br>
     <br>
@@ -54,9 +55,16 @@ document.addEventListener("DOMContentLoaded", function () {
             return `Opening <a href="https://linkedin.com/in/arul-loomba" target="_blank" class="custom-link">LinkedIn/arul-loomba</a>...`;
         },
 
-        projects: () => {
+        projects: `
+        - Backend: Taqneeq App's Backend, Mumbai MUN's Backend, ACM's Website Backend (Certification Portal)<br>
+        - App Integrations: Integrate Dynamic data with backend to the flutter app.<br>
+        - Hindi Call Transcriber: <a href="https://github.com/KartikJain14/darpg2024" target="_blank" class="custom-link">VoxBridge</a> is a Hindi audio to English and Hindi transcriber.<br>
+        - Subdomain Distribution Portal: <a href="https://github.com/KartikJain14/CloudFrost" target="_blank" class="custom-link">CloudFrost</a> is a portal that allows users to recieve free sub domains with DNS support.<br>
+        - Discord Bots: Customized Discord bot (heavily customized)
+        `,
+        'projects-ext': () => {
             window.location.href = 'projects.html';
-            return 'Opening projects view...';
+            return 'Opening extended projects view...';
         },
         awards: `
         - 4x Dean's List Award (2023-2025) UC Berkeley, EECS <br>
@@ -101,7 +109,8 @@ document.addEventListener("DOMContentLoaded", function () {
         r: "resume",
         cls: "clear",
         h: "help",
-        fetch: "neofetch"
+        fetch: "neofetch",
+        pe: "projects-ext"
     };
 
     const commandList = Object.keys(commands).concat(Object.keys(aliases));
