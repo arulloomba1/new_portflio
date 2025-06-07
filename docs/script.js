@@ -34,24 +34,24 @@ document.addEventListener("DOMContentLoaded", function () {
         neofetch: () => {
             let currentTime = new Date().toLocaleTimeString();
             return `<pre>
-        <span class="blue">      /\\      </span>  User: jkartik
+        <span class="blue">      /\\      </span>  User: arulloomba
         <span class="blue">     /  \\     </span>  OS: Arch Linux
-        <span class="blue">    /    \\    </span>  Hostname: jkartik.in
+        <span class="blue">    /    \\    </span>  Hostname: arulloomba.github.io
         <span class="blue">   /  /\\  \\   </span>  Time: ${currentTime}
-        <span class="blue">  /  (--)  \\  </span>  Email: <a href="mailto:contact@jkartik.in" class="custom-link">contact@jkartik.in</a>
-        <span class="blue"> /  /    \\  \\ </span>  GitHub: <a href="https://GitHub.com/KartikJain14" target="_blank" class="custom-link">GitHub.com/KartikJain14</a>
-        <span class="blue">/___\\    /___\\</span>  LinkedIn: <a href="https://LinkedIn.com/in/KartikJain1410" target="_blank" class="custom-link">LinkedIn.com/in/KartikJain1410</a>
+        <span class="blue">  /  (--)  \\  </span>  Email: <a href="mailto:arulloomba@berkeley.edu" class="custom-link">arulloomba@berkeley.edu</a>
+        <span class="blue"> /  /    \\  \\ </span>  GitHub: <a href="https://GitHub.com/arulloomba1" target="_blank" class="custom-link">GitHub.com/arulloomba1</a>
+        <span class="blue">/___\\    /___\\</span>  LinkedIn: <a href="https://LinkedIn.com/in/arul-loomba" target="_blank" class="custom-link">LinkedIn.com/in/arul-loomba</a>
         </pre>`;
         },
 
         github: () => {
             window.open("https://github.com/arulloomba1", "_blank");
-            return `Opening <a href="https://github.com/KartikJain14" target="_blank" class="custom-link">GitHub/KartikJain14</a>...`;
+            return `Opening <a href="https://github.com/arulloomba1" target="_blank" class="custom-link">GitHub/arulloomba1</a>...`;
         },
 
         linkedin: () => {
             window.open("https://www.linkedin.com/in/arul-loomba/", "_blank");
-            return `Opening <a href="https://linkedin.com/in/KartikJain1410" target="_blank" class="custom-link">LinkedIn/KartikJain1410</a>...`;
+            return `Opening <a href="https://linkedin.com/in/arul-loomba" target="_blank" class="custom-link">LinkedIn/arul-loomba</a>...`;
         },
 
         projects: `
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
         - Managed a team of 15+ developers for ACM MPSTME's Technical Team<br>
         - Managed a team of 5+ developers for NMIMS' official Technical Fest
         `,
-        whoami: `<a href="https://jkartik.in" class="custom-link">Kartik Jain</a> | Backend Developer`,
+        whoami: `<a href="arulloomba1.github.io" class="custom-link">Arul Loomba</a> | Software Engineer`,
 
         resume: () => {
             const link = document.createElement("a");
